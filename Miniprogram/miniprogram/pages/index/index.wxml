@@ -1,7 +1,82 @@
 <!--index.wxml-->
 <view class="container">
+    <!--搜索栏-->
+    <view class="search">
+        <van-search value="{{ value }}" placeholder="请输入搜索关键词" 
+        shape="round" 
+        background="#d1a161"
+        custom-class="search-custom"/> 
+    </view>
 
-  
+    <!--底部标签栏-->
+    <view class="tabbar">
+        <van-tabbar active="{{ active }}" bind:change="onChange"
+        active-color="#d1a161">
+            <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+            <van-tabbar-item>
+            <image
+                slot="icon"
+                src="{{ icon.classify }}"
+                mode="aspectFit"
+                style="width: 30px; height: 18px;"
+            />
+            <image
+                slot="icon-active"
+                src="{{ icon.aclassify }}"
+                mode="aspectFit"
+                style="width: 30px; height: 18px;"
+            />
+            分类</van-tabbar-item>
+            <van-tabbar-item >
+            <image
+                slot="icon"
+                src="{{ icon.gift }}"
+                mode="aspectFit"
+                style="width: 30px; height: 18px;"
+            />
+            <image
+                slot="icon-active"
+                src="{{ icon.agift }}"
+                mode="aspectFit"
+                style="width: 30px; height: 18px;"
+            />
+            礼盒</van-tabbar-item>
+            <van-tabbar-item icon="friends-o">联系我们</van-tabbar-item>
+        </van-tabbar>
+    </view>
+   
+    <!--轮播图-->
+    <view class="swiper">
+        <swiper class="fa" indicator-dots autoplay 
+                interval="3000" 
+                duration="800"
+                bindchange="bindchange">
+          <block wx:for="{{swiperImg}}" wx:key="index">
+              <swiper-item class="item">
+                <image src="{{item}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
+              </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    
+    <!--商品展示-->
+    <view class="goods">
+        <view class="text">
+            <van-divider
+            contentPosition="center"
+            customStyle="color: #151515; font-size: 29rpx;">
+            ·· 精选 ··
+            </van-divider>
+        </view>
+        <view class="list">
+            <view class="item"></view>
+            <view class="item"></view>
+            <view class="item"></view>
+            <view class="item"></view><view class="item"></view>
+            <view class="item"></view>
+        </view>
+    </view>
+
 
 
 </view>
