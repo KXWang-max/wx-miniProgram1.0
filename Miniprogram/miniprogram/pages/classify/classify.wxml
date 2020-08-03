@@ -1,4 +1,26 @@
-<view class="classify">
-123
+  <view class="classify">
+
+      <view class="left">
+          <block wx:for="{{ leftList }}" wx:key="index">
+              <view class="left-item {{curNav == item.id ? 'active':''}}"
+              bindtap="switchRightTab"
+              data-index="{{index}}" 
+              data-id="{{item.id}}">{{item.text}}</view>
+          </block>
+      </view>
+
+      <view class="right">
+          <!-- 分类下有数据 -->
+            <view wx:if="{{ leftList[curNav].isHaveChild }}">
+                  <block wx:for="{{ leftList[curNav].righContent }}" wx:key="index">
+                      <view class="right-item">{{item.text}}
+                          <!-- <view class="img">{{item.text}}</view>
+                          <view class="text">{{item.text}}</view> -->
+                      </view>
+                  </block>
+            </view>
+            <!-- 分类下无数据 -->
+          <!-- <view class="empty" wx:else>该分类下暂无数据</view> -->
+      </view>
 
 </view>
