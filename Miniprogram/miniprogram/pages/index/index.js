@@ -13,7 +13,7 @@ Page({
   },
   //底部标签栏
   onShow: function () {
-    console.log('加载底部栏')
+    console.log('加载底部栏index')
     this.getTabBar().init();
   },
   // 轮播图

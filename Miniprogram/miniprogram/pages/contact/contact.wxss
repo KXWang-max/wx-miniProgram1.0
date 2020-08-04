@@ -1,0 +1,20 @@
+.contact{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 200rpx;
+}
+      .contact .text{
+        width: 300rpx;
+        height: 150rpx;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 150rpx;
+        color: #151515;
+      }
+      .contact .QRcode{
+        width: 350rpx;
+        height: 350rpx;
+        margin: 0 auto;
+        border:1px solid #d1a161;
+      }

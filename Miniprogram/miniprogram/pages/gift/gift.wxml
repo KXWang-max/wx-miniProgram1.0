@@ -1,0 +1,8 @@
+<view class="gift">
+    <block class="list" wx:for="{{giftList}}" wx:key="index">
+        <view class="giftItem">
+          <image class="img" src="{{item.url}}"></image>
+          <view class="text">{{item.text}}</view>
+        </view>
+    </block>
+</view>

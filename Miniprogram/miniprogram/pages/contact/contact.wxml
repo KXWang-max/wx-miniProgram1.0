@@ -1,0 +1,4 @@
+<view class="contact">
+  <view class="text">扫码添加～</view>
+  <image class="QRcode" src=""></image>
+</view>

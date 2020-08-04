@@ -1,0 +1,18 @@
+<view class="info">
+
+    <view class="topImg">
+      <image class="img" src="{{img}}" mode="aspectFit"></image>
+      <view class="text">{{text}}</view>
+    </view>
+
+    <view class="introduce">
+        <van-tabs active="{{ active }}" bind:change="onChange" animated duration='0.5' swipeable 
+        bind:change="tabChange">
+            <van-tab title="标签 1">内容 1</van-tab>
+            <van-tab title="标签 2">内容 2</van-tab>
+            <van-tab title="标签 3">内容 3</van-tab>
+            <van-tab title="标签 4">内容 4</van-tab>
+        </van-tabs>
+    </view>
+
+</view>

@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/classify/classify"
+    "pages/classify/classify",
+    "pages/gift/gift",
+    "pages/contact/contact"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -20,6 +22,14 @@
       {
         "pagePath": "pages/classify/classify",
         "text": "分类"
+      },
+      {
+        "pagePath": "pages/gift/gift",
+        "text": "礼盒"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系我们"
       }
     ]
   },

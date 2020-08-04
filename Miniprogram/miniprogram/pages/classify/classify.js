@@ -2,28 +2,45 @@ Page({
   data: {
     activeKey: 0,
     curNav:0,
+    curIndex:0,
     leftList:[
       {
         "id":0,
         "text":"种类0",
-        "isHaveChild":true,
-        "rightContent":[
+        isHaveChild:true,
+        rightContent:[
           {
-            "text":"123"
+            "url":"/pages/info/info?img=cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/classify/classify1-1.jpeg&text=hhh",
+            "img":"cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/classify/classify1-1.jpeg",
+            "text":"hhh"
+          },
+          {
+            "img":"cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/classify/classify1-1.jpeg",
+            "text":"xxx"
+          },
+          {
+            "img":"cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/classify/classify1-1.jpeg",
+            "text":"lala"
           }
         ]
       },
       {
         "id":1,
-        "text":"种类1"
+        "text":"种类1",
+        isHaveChild:false,
+        leftList:[]
       },
       {
         "id":2,
-        "text":"种类2"
+        "text":"种类2",
+        isHaveChild:false,
+        leftList:[]
       },
       {
         "id":3,
-        "text":"种类3"
+        "text":"种类3",
+        isHaveChild:false,
+        leftList:[]
       }
     ],
   },
@@ -42,7 +59,6 @@ Page({
       curNav: id,
       curIndex: index
     })
-    console.log(this.data.leftList[curNav].ishaveChild)
   } 
     
 })

@@ -48,5 +48,5 @@
         height: 230rpx;
         border-radius: 7px;
         margin: 0 30rpx 80rpx;
-        background-color: burlywood;
+        background-color: #ccc;
       }
