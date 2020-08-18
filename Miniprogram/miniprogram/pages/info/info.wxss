@@ -8,19 +8,29 @@
     width: 100%;
     height: 300rpx;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
       .topImg .img{
         width: 100%;
-        height: 100%;
+        height: 300rpx;
         background-color: #202020;
       }
       .topImg .text{
         width: 100%;
         height: 80rpx;
-        color: white;
-        margin-top: -45rpx;
+        background-color:white;
+        color: #202020;
+        line-height: 80rpx;
+        /* ui后期加，暂时隐藏 */
+        display: none;
       }
   .introduce{
     width: 100%;
-    
   }
+      .infoText{
+        width: 90%;
+        margin: 36rpx 5% 0;
+        font-size: 27rpx;
+        color: #333;
+      }

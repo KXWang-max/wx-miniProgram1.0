@@ -3,11 +3,12 @@
 }
     .giftItem{
         width: 100%;
-        height: 350rpx;
+        height: 380rpx;
     }
         .giftItem .img{
           width: 100%;
           height: 300rpx;
+          border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
           overflow: hidden;
         }
@@ -16,6 +17,6 @@
           height: 50rpx;
           line-height: 50rpx;
           text-align: center;
-          color: #151515;
-          border-bottom: 1px solid #ccc;
+          font-size: 27rpx;
+          color: #141414;
         }

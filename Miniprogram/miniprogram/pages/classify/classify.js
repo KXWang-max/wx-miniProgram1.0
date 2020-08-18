@@ -13,7 +13,6 @@ Page({
   //获取数据
   onLoad:function(){
     leftLists.get().then(res=>{
-      console.log(res.data)
         this.setData({
           leftList:res.data
         })

@@ -61,6 +61,7 @@
                 height: 100rpx;
                 line-height: 100rpx;
                 text-align: center;
+                color: #333;
               }
         .empty{
             width: 100%;

@@ -1,26 +1,18 @@
+const db = wx.cloud.database()
+const gifts = db.collection('gifts')
+
 Page({
   data: {
-    giftList:[
-      {
-        url:'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic1.jpeg',
-        text:'xxxxxx'
-      },
-      {
-        url:'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic1.jpeg',
-        text:'lalala'
-      },
-      {
-        url:'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic1.jpeg',
-        text:'hhhhhh'
-      },
-      {
-        url:'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic1.jpeg',
-        text:'emmmm'
-      }
-    ]
+    giftList:[]
+  },
+  onLoad:function(){
+    gifts.get().then(res=>{
+      this.setData({
+        giftList:res.data
+      })
+    })
   },
   onShow: function () {
-    console.log('加载底部栏gift')
     this.getTabBar().init();
   },
 })
