@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/classify/classify",
     "pages/gift/gift",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/info/info"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

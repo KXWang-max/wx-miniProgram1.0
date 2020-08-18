@@ -16,7 +16,7 @@
                 bindchange="bindchange">
           <block wx:for="{{swiperImg}}" wx:key="index">
               <swiper-item class="item">
-                <image src="{{item}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
+                <image src="{{item.url}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
               </swiper-item>
           </block>
         </swiper>
@@ -32,12 +32,12 @@
             </van-divider>
         </view>
         <view class="list">
-            <view class="item"></view>
-            <view class="item"></view>
-            <view class="item"></view>
-            <view class="item"></view><view class="item"></view>
-            <view class="item"></view>
+            <block wx:for="{{choice}}" wx:key="index">
+                <image class="item" src="{{item.url}}"></image>
+            </block>
         </view>
     </view>
-
+    
+    <!-- 避免底部栏遮挡内容 -->
+    <view class="h">到底啦!到分类中查看更多~</view>
 </view>

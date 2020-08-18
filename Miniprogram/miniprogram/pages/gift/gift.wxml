@@ -5,4 +5,5 @@
           <view class="text">{{item.text}}</view>
         </view>
     </block>
+    <view class="h">到底啦!到分类中查看更多~</view>
 </view>

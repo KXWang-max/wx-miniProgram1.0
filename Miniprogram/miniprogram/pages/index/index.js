@@ -1,19 +1,36 @@
+//初始化云端数据库
+const db = wx.cloud.database()
+//轮播图数据
+const swiperImgs = db.collection("swiperImgs")
+//精选区数据
+const choices = db.collection("choices")
+
+
 //index.js
 const app = getApp()
-
 Page({
   data: {
     active: 0,
-    swiperImg:[
-      'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic1.jpeg',
-      'cloud://richwoman-env-iw8pg.7269-richwoman-env-iw8pg-1302762108/swiper/pic2.jpeg'
-    ],
+    swiperImg:[],
     swiperIdx: 0,
-    
+    choice:[]
+  },
+  onLoad:function(){
+      //轮播图数据
+      swiperImgs.get().then(res=>{
+        this.setData({
+          swiperImg : res.data
+        })
+      })
+      //精选区数据
+      choices.get().then(res=>{
+        this.setData({
+          choice:res.data
+        })
+      })
   },
   //底部标签栏
   onShow: function () {
-    console.log('加载底部栏index')
     this.getTabBar().init();
   },
   // 轮播图

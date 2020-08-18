@@ -29,7 +29,7 @@
     }
         .right-items{
           width: 100%;
-          height: 100%;
+          height: 100vh;
           margin-top: 20rpx;
           display: flex;
           flex-direction: row;
@@ -37,6 +37,10 @@
           /* 解决换行后，两行之间距离过大问题 */
           align-content:flex-start;
         }
+              .ch{
+                height: 100rpx;
+                width: 100%;
+              }
               .right-items .item{
                 width: 50%;
                 height: 280rpx;

@@ -1,15 +1,15 @@
   <view class="classify">
 
-      <view class="left">
+      <scroll-view scroll-y class="left">
           <block wx:for="{{ leftList }}" wx:key="index">
-              <view class="left-item {{curNav == item.id ? 'active':''}}"
+              <view class="left-item {{curNav == item._id ? 'active':''}}"
               bindtap="switchRightTab"
               data-index="{{index}}" 
-              data-id="{{item.id}}">{{item.text}}</view>
+              data-id="{{item.id}}">{{item.class}}</view>
           </block>
-      </view>
+      </scroll-view>
 
-      <view class="right">
+      <scroll-view scroll-y class="right">
           <!-- 分类下有数据 -->
             <view class="right-items" wx:if="{{ leftList[curIndex].isHaveChild }}">
                   <block wx:for="{{ leftList[curIndex].rightContent }}" wx:key="index">
@@ -18,9 +18,11 @@
                               <view class="text">{{item.text}}</view>  
                       </navigator>
                   </block>
+                  <!-- 防止底部栏遮挡内容 -->
+                  <view class="ch"></view>
             </view>
             <!-- 分类下无数据 -->
           <view class="empty" wx:else>该分类下暂无数据</view>
-      </view>
+      </scroll-view>
 
 </view>

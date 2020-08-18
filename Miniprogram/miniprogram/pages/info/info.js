@@ -17,8 +17,9 @@ Page({
   onLoad: function (options) {
     this.setData({
       img:options.img,
-      text:options.text
+      text:options.text,
     })
+    console.log('y');
   },
   onChange(event) {
     
