@@ -20,11 +20,17 @@ Page({
       text:options.text,
       no:options.no
     })
+    //这里在数据库上应该有更好的设计方法，但信息多时间少..so..用了find
     infos.get().then(res=>{
+      let infoArray = res.data
+      console.log(infoArray)
+      let noFinalArray = infoArray.find(item=>{
+        return item.no==that.data.no
+      })
       this.setData({
-        func:res.data[that.data.no].func,
-        people:res.data[that.data.no].people,
-        usage:res.data[that.data.no].usage,
+        func:noFinalArray.func,
+        people:noFinalArray.people,
+        usage:noFinalArray.usage,
       })
     })
   },

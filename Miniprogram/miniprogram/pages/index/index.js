@@ -33,6 +33,13 @@ Page({
   onShow: function () {
     this.getTabBar().init();
   },
+  //搜索栏搜索
+  onSearch:function(e) {
+    console.log(e.detail)
+  },
+  //取消搜索
+  onCancel:function() {
+  },
   // 轮播图
   bindchange(e) {
     this.setData({

@@ -5,7 +5,9 @@
         <van-search value="{{ value }}" placeholder="请输入搜索关键词" 
         shape="round" 
         background="#d1a161"
-        custom-class="search-custom"/> 
+        custom-class="search-custom"
+        bind:search="onSearch"
+        bind:cancel="onCancel"/> 
     </view>
    
     <!--轮播图-->

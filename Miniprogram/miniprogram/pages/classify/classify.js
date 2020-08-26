@@ -32,6 +32,21 @@ Page({
       curNav: id,
       curIndex: index
     })
-  } 
+  },
+   //拼接url,并跳转
+   jointUrl:function(event){
+    let that = this
+    let indexs = parseInt(event.target.dataset.index)
+    leftLists.get().then(res=>{
+      let rightArray = res.data[that.data.curNav].rightContent;
+      let no = rightArray[indexs].no;
+      let img = rightArray[indexs].img;
+      let text = rightArray[indexs].text;
+      let urlFinal = '/pages/info/info?no='+no+'&text='+text+'&img='+img;
+      wx.navigateTo({
+        url: urlFinal,
+      })
+  })
+  }, 
     
 })

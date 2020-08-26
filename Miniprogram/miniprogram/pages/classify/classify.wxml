@@ -12,10 +12,10 @@
       <scroll-view scroll-y class="right">
           <!-- 分类下有数据 -->
             <view class="right-items" wx:if="{{ leftList[curIndex].isHaveChild }}">
-                  <block wx:for="{{ leftList[curIndex].rightContent }}" wx:key="index">
-                      <navigator class="item" url="{{item.url}}">
-                              <image class="img" src="{{item.img}}"></image>
-                              <view class="text">{{item.text}}</view>  
+                  <block wx:for="{{ leftList[curIndex].rightContent }}" wx:key="index" >
+                      <navigator class="item" >
+                              <image class="img" data-index="{{index}}" bindtap="jointUrl" src="{{item.img}}"></image>
+                              <view class="text" data-index="{{index}}" bindtap="jointUrl">{{item.text}}</view>  
                       </navigator>
                   </block>
                   <!-- 防止底部栏遮挡内容 -->

@@ -2,6 +2,7 @@
 /* 搜索 */
 .search{
   width: 100vw;
+  display: none;
 }
 /* 轮播图 */
 .swiper{
